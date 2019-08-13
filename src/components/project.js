@@ -9,7 +9,7 @@ console.log(props)
     })
     return (
         <div>
-            {/* <Image
+            <Image
                 alt={`Screenshot of ${props.project.name}`}
                 style={{
                     marginRight: rhythm(1 / 2),
@@ -17,10 +17,11 @@ console.log(props)
                     minWidth: 50,
                     borderRadius: `100%`,
                 }}
+                fixed={props.project.screenshot}
                 imgStyle={{
                     borderRadius: `50%`,
                 }}
-            /> */}
+            />
             <h3>{props.project.name}</h3>
             <p>{props.project.overview}</p>
             <ul>{contributions}</ul>
