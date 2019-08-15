@@ -22,15 +22,17 @@ class Project extends React.Component {
         })
         return (
             <div className={`${styles.project} ${this.state.isExpanded && styles.isExpanded}`} onClick={this.handleClick}>
-                <img src={this.props.project.screenshot} />
-                <div className={styles.projectContent}>
-                    <h3>{this.props.project.name}</h3>
-                    <p>{this.props.project.overview}</p>
-                    {/* <ul>{contributions}</ul> */}
-                    <h4>{`Tech used: ${this.props.project.tech}`}</h4>
+                <div className={styles.projectContentContainer}>
+                    <img src={this.props.project.screenshot} />
+                    <div className={styles.projectContent}>
+                        <h3>{this.props.project.name}</h3>
+                        <h4>{`Tech used: ${this.props.project.tech}`}</h4>
+                    </div>
                 </div>
-                <a href={this.props.project.github}>View on Github</a>
-                {this.props.project.demo && <div><a href={this.props.project.demo}>Demo</a></div>}
+                <div className={styles.btnRow}>
+                    <a href={this.props.project.github} className={styles.github}>View on Github</a>
+                    <a className={styles.demo} href={this.props.project.demo}>Demo</a>
+                </div>
             </div>
         )
    }
