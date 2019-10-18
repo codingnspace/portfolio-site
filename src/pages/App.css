@@ -1,0 +1,54 @@
+.left-panel,
+.right-panel {
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    background-color: red;
+    animation: decWidth 3s forwards;
+    top: 0;
+}
+
+.left-panel {
+    left: 0;
+}
+
+.right-panel {
+    right: 0;
+}
+
+.name {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    font-size: 45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: black;
+    color: white
+}
+
+.name p {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.name div {
+    margin-top: 47px;
+    font-size: 20px;
+    bottom: 0;
+    animation: incFont 3s forwards;
+}
+
+@keyframes decWidth {
+    0% {width: 50%;}
+    100% {width: 2%;}
+}
+
+@keyframes incFont {
+    0% {font-size: 10px;}
+    100% {font-size: 20px;}
+}

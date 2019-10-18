@@ -58,8 +58,8 @@ class Layout extends React.Component {
           marginRight: `auto`,
         }}
       >
-        <header>{header}</header>
-        <main>{children}</main>
+        {/* <header>{header}</header> */}
+        <main style={{marginTop: '220px'}}>{children}</main>
         <footer style={{textAlign: 'center'}}>
           Developed by Pearl McPhee.
           <div>Built with Gatsby, React, GraphQL and <span role="img" arial-label="heart">❤️</span></div>
